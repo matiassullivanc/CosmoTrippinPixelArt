@@ -443,10 +443,17 @@ export default function Game({ best, onBest, startSignal, onNavigate, currentPag
           ref={panelRef}
           className="pixel-panel overflow-hidden w-full lg:absolute lg:top-0 lg:w-[36rem]"
           style={
-            stage.width > 0
-              ? { transform: `scale(${stage.scale})`, transformOrigin: "top left", top: "-155px", right: "0px", bottom: "0px", left: "-155px" }
-              : undefined
-          }
+  stage.width > 0
+    ? {
+        transform: `scale(${stage.scale})`,
+        transformOrigin: "top left",
+        top: "0px",
+        left: "0px",
+        right: "auto",
+        bottom: "auto",
+      }
+    : undefined
+}
         >
           {/* HUD */}
           <div className="flex items-start justify-between gap-2 border-b-[3px] border-cosmo-white/25 bg-cosmo-void/60 px-3 py-1.5">
