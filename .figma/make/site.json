@@ -1,0 +1,10 @@
+{
+  "description": "Engage in an interactive gaming experience designed for players seeking fun and challenge, featuring captivating visuals and immersive gameplay.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

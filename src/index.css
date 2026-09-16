@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-cosmo-pink: #ff4f9a;
+  --color-cosmo-yellow: #ffd04d;
+  --color-cosmo-cyan: #00e0ff;
+  --color-cosmo-teal: #2ed7c3;
+  --color-cosmo-white: #f8f8f8;
+  --color-cosmo-void: #07040f;
+  --color-cosmo-deep: #100a24;
+  --color-cosmo-panel: #150e2e;
+  --font-display: "Press Start 2P", monospace;
+  --font-body: "VT323", monospace;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #07040f;
+  color: var(--color-cosmo-white);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: none;
+}
+
+/* Crisp pixel edges for all sprite SVGs */
+.pixel {
+  shape-rendering: crispEdges;
+  image-rendering: pixelated;
+}
+
+/* Chunky pixel panel: hard edges via layered box-shadow, no soft radius */
+.pixel-panel {
+  position: relative;
+  background: var(--color-cosmo-panel);
+  border: 3px solid var(--color-cosmo-white);
+  box-shadow:
+    0 0 0 3px var(--color-cosmo-void),
+    6px 6px 0 3px rgba(0, 0, 0, 0.55);
+}
+
+.pixel-outline {
+  text-shadow:
+    2px 0 0 #07040f,
+    -2px 0 0 #07040f,
+    0 2px 0 #07040f,
+    0 -2px 0 #07040f,
+    2px 2px 0 #07040f,
+    -2px -2px 0 #07040f;
+}
+
+/* Focus ring that never relies on colour alone */
+.pixel-focus:focus-visible {
+  outline: 3px dashed var(--color-cosmo-white);
+  outline-offset: 3px;
+}
+
+@keyframes cosmo-blink {
+  0%, 60% { opacity: 1; }
+  61%, 100% { opacity: 0.25; }
+}
+.animate-blink { animation: cosmo-blink 1s steps(1) infinite; }
+
+@keyframes cosmo-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-float { animation: cosmo-float 3s ease-in-out infinite; }
+
+.game-track {
+  height: clamp(260px, 48vh, 560px);
+}
+
+@media (max-width: 1023px) {
+  .game-track {
+    aspect-ratio: 1145 / 1374;
+    height: auto;
+  }
+}
+
+@keyframes cosmo-rise {
+  0% { transform: translate(-50%, 0) scale(0.6); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(-50%, -60px) scale(1.15); opacity: 0; }
+}
+.animate-rise { animation: cosmo-rise 0.9s steps(6) forwards; }
+
+@keyframes cosmo-shake {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-6px, 3px); }
+  40% { transform: translate(5px, -4px); }
+  60% { transform: translate(-4px, -3px); }
+  80% { transform: translate(4px, 4px); }
+}
+.animate-shake { animation: cosmo-shake 0.35s steps(3); }
+
+@keyframes cosmo-twinkle {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 1; }
+}
+
+/* Hide scrollbars until scrolling */
+* { scrollbar-width: thin; scrollbar-color: transparent transparent; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: transparent; }
+*:hover::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); }

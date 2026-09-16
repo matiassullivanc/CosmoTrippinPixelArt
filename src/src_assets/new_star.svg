@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1279" height="1230" viewBox="0 0 1279 1230">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE500"/>
+      <stop offset="0.48" stop-color="#FFF000"/>
+      <stop offset="1" stop-color="#FFD51A"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFD21A"/>
+      <stop offset="1" stop-color="#F5A900"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Pixelated dark outer silhouette -->
+  <path fill="#02070D" d="
+    M593 193H686V225H733V306H779V351H812V401H858V420H1068V467H1113V638H1065V685H1024V749H979V797H934V1027H876V1060H812V1009H766V951H709V879H566V951H511V1009H463V1060H397V1027H337V797H292V749H248V685H207V638H156V467H216V420H489V401H535V351H568V306H593Z"/>
+
+  <!-- Additional dark pixel shadow blocks -->
+  <path fill="#07101A" d="
+    M545 225h48v82h-48z M686 225h47v82h-47z
+    M489 307h79v48h-79z M733 307h79v48h-79z
+    M216 420h52v47h-52z M1009 420h59v47h-59z
+    M207 638h41v47h-41z M1024 638h41v47h-41z
+    M292 749h44v48h-44z M979 749h45v48h-45z
+    M337 797h60v230h-60z M880 797h54v230h-54z
+    M397 1009h66v51h-66z M813 1009h63v51h-63z"/>
+
+  <!-- Main star silhouette -->
+  <path fill="url(#gold)" shape-rendering="crispEdges" d="
+    M608 231H670V314H718V365H730V516H1009V612H931V681H850V765H881V982H814V933H720V850H560V933H462V982H397V766H421V682H348V613H268V516H512V563H549V511H608V430H549V366H561V315H608Z"/>
+
+  <!-- Bright central face -->
+  <path fill="#FFF000" d="
+    M608 278H670V356H718V500H730V551H955V605H825V650H775V765H810V903H718V850H560V903H469V766H501V650H452V605H315V551H512V563H549V511H608V430H549V366H561V356H608Z"/>
+
+  <!-- Orange pixel shading on lower/sides -->
+  <path fill="url(#orange)" shape-rendering="crispEdges" d="
+    M268 516h242v34H268z
+    M348 613h73v69h-73z
+    M397 766h55v164h-55z
+    M397 933h65v49h-65z
+    M462 933h96v18h-96z
+    M560 850h160v30H560z
+    M720 933h94v18h-94z
+    M814 933h67v49h-67z
+    M850 766h31v216h-31z
+    M931 613h78v-97h-78z
+    M730 516h279v35H730z"/>
+
+  <!-- Pixel highlights -->
+  <path fill="#FFFDF0" shape-rendering="crispEdges" d="
+    M536 421h57v80h-57z
+    M501 501h92v49h-92z
+    M363 550h137v48H363z
+    M449 598h99v54h-99z"/>
+
+  <!-- Warm highlight pixels -->
+  <path fill="#FFE53A" shape-rendering="crispEdges" d="
+    M593 231h15v83h-15z
+    M670 314h15v51h-15z
+    M718 365h12v151h-12z
+    M268 516h44v35h-44z
+    M1009 516h-43v35h43z
+    M397 766h24v95h-24z
+    M850 766h31v95h-31z"/>
+
+  <!-- Bottom dark notch and orange rim -->
+  <path fill="#03080D" shape-rendering="crispEdges" d="
+    M546 790H720V831H703V879H563V831H546Z"/>
+  <path fill="#F7B510" shape-rendering="crispEdges" d="
+    M546 790H720V810H703V831H563V810H546Z"/>
+</svg>
