@@ -245,9 +245,9 @@ export default function Game({ best, onBest, startSignal, onNavigate, currentPag
 
       const width = panel.offsetWidth;
       const height = panel.offsetHeight;
-      const availableWidth = gameArea.clientWidth - 48;
-      const availableHeight = gameArea.clientHeight - 32;
-      const scale = Math.min(1.6, availableWidth / width, availableHeight / height);
+      const availableWidth = gameArea.clientWidth - 32;
+const availableHeight = gameArea.clientHeight - 120;
+const scale = Math.min(1.6, availableWidth / width, availableHeight / height);
 
       setStage({ width, height, scale });
     };
