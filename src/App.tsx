@@ -32,7 +32,7 @@ export default function App() {
 
   return (
     <div className="flex h-full flex-col bg-cosmo-void text-cosmo-white">
-      <main className="flex-1 overflow-y-auto">
+      <main className={`flex-1 min-h-0 ${page === "game" ? "overflow-hidden" : "overflow-y-auto"}`}>
         {page === "home" && <Home best={best} onStart={startFreshGame} onNavigate={setPage} currentPage={page} />}
         {page === "game" && (
           <Game best={best} onBest={handleBest} startSignal={startSignal} onNavigate={setPage} currentPage={page} />
