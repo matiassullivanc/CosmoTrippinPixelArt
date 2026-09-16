@@ -431,7 +431,7 @@ export default function Game({ best, onBest, startSignal, onNavigate, currentPag
     <div ref={gameRef} className="relative flex min-h-full flex-col lg:h-full">
       <Starfield count={50} />
       <div
-        className="relative flex flex-1 items-center justify-center w-full max-w-none px-2 py-2 sm:px-4 lg:absolute lg:flex-none lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:p-0"
+        className="relative flex flex-1 items-center justify-center w-full max-w-none px-2 py-2 sm:px-4 lg:absolute lg:flex-none lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 lg:p-0"
         style={
           stage.width > 0
             ? { width: stage.width * stage.scale, height: stage.height * stage.scale }
