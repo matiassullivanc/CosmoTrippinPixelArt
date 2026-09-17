@@ -282,7 +282,7 @@ export default function HowToPlay({ onPlay, onNavigate, currentPage }: Props) {
         {/* ── START GAME button ── */}
         <button
           onClick={onPlay}
-          className="group relative mx-auto mt-5 w-full max-w-[320px] cursor-pointer overflow-hidden rounded-full border-[3px] border-cosmo-pink bg-cosmo-pink px-8 py-3.5 text-center transition-all active:scale-95 hover:bg-cosmo-pink/90 hover:shadow-[0_0_24px_#ff4f9a88] shadow-[0_4px_0_#c03070,0_0_12px_#ff4f9a55]"
+          className="pixel-focus group relative mx-auto mt-5 w-full max-w-[320px] cursor-pointer overflow-hidden rounded-full border-[3px] border-cosmo-pink bg-cosmo-pink px-8 py-3.5 text-center transition-all active:scale-95 hover:bg-cosmo-pink/90 hover:shadow-[0_0_24px_#ff4f9a88] shadow-[0_4px_0_#c03070,0_0_12px_#ff4f9a55]"
         >
           <span className="font-display text-[13px] text-cosmo-white sm:text-[14px]">
             START GAME ▶
