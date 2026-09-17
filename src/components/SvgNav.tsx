@@ -37,7 +37,7 @@ export default function SvgNav({ activePage, onNavigate, className = "" }: Props
             onClick={() => onNavigate(page)}
             aria-label={label}
             aria-current={activePage === page ? "page" : undefined}
-            className="flex-1 cursor-pointer"
+            className="pixel-focus flex-1 cursor-pointer"
           />
         ))}
       </div>
